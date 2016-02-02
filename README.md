@@ -1,10 +1,26 @@
 # webpack-playground
 Webpack features playground
 
-Console commands
+#webpack-basic
 ````
 1. npm i
 2. npm run build
 It will generate bundle.js
 Double-click index.html file
 ````
+
+#webpack-dev-server
+````
+1. npm i
+2. npm run dev
+Open browser http://localhost:8080 or http://localhost:8080/webpack-dev-server/
+````
+This setup has the feature Hot Module Replacement enabled. Detects changed modules and inject them into the running app.
+- webpack-dev-server - Starts a little node.js Express server to serve webpack bundle.
+- `--devtool inline-sourcemap` - Serves bundle with inline sourcemap for debugging with original js files.
+- `--progress` - Outputs bundling details to console.
+- `--colors` - Terminal colors.
+- `--inline --hot` - Enables Hot Module Replacement feature. It's equivalent to adding
+  `'webpack/hot/dev-server',
+  'webpack-dev-server/client?http://localhost:8080'` to `entry` field in `webpack.config.js`
+- `--content-base build` - Points to the build folder for browser file requests.
