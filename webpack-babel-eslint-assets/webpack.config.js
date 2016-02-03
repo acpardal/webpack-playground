@@ -10,7 +10,7 @@ module.exports = {
     },
     module: {
       loaders: [
-        { test: /\.js?$/, loaders: ['babel-loader', 'eslint-loader'], exclude: /node_modules/ },
+        { test: /\.js$/, loaders: ['babel-loader', 'eslint-loader'], exclude: /node_modules/ },
         //same as { test: /\.css$/, loader: "style-loader!css-loader" }
         { test: /\.css$/, loader: "style!css" },
         //images less than 10000bytes are inlined
