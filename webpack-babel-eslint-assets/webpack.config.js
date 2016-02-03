@@ -15,7 +15,7 @@ module.exports = {
         { test: /\.css$/, loader: "style!css" },
         //images less than 10000bytes are inlined
         { test: /\.(png|jpg)$/, loader: 'url?limit=10000' },
-        //fonts less than 10000bytes are inlined
+        //fonts less than 1 byte so it doesn't inline. Inline founts adds to much overhead to the bundle.js file
         { test: /\.(eot|svg|ttf|woff(2)?)(\?v=\d+\.\d+\.\d+)?/, loader: 'url?limit=1' }
       ]
     }
