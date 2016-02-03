@@ -16,7 +16,7 @@ module.exports = {
         //images less than 10000bytes are inlined
         { test: /\.(png|jpg)$/, loader: 'url?limit=10000' },
         //fonts less than 10000bytes are inlined
-        { test: /\.woff$/, loader: 'url?limit=10000' }
+        { test: /\.(eot|svg|ttf|woff(2)?)(\?v=\d+\.\d+\.\d+)?/, loader: 'url?limit=1' }
       ]
     }
 };
