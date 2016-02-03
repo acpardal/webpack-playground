@@ -37,5 +37,14 @@ Setup with:
 - [Babel](http://babeljs.io/) compiler to transpile ECMAScript 6/ES6/ES2015 code to ECMAScript 5/ES5
 - [Eslint](http://eslint.org/) for code linting (linting is the process of running a program that will analyse code for potential errors.)
 
-#webpack-babel-eslint-css
-work in progress
+#webpack-babel-eslint-assets
+````
+1. npm i
+2. npm run build
+It will generate bundle.js with css and 1 inline img and 1 img file.
+Double-click index.html file
+2. npm run build:watch - For automatically bundle updated files.
+````
+Setup with:
+- style-loader and css-loader for bundling css files.
+- url-loader and file-loader for bundling/generating images
